@@ -1,0 +1,94 @@
+body{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh; /*ini tuh artinya jadi minimal tinggi si bodi nya tuh 100vh sebenernya kalo misalkan
+	di web nya isi nya bukan cuman card ini doang, mending make margin top aja*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #333;
+	font-family: consolas;
+}
+
+img{
+	max-width: 100px;
+}
+
+h2{
+	margin: 15px 0 0;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container{
+	width: 1000px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card{
+	position: relative;
+}
+
+.face{
+	width: 300px;
+	height: 200px;
+	transition: 0.5s; /*ini tuh jadi kan dia pas hover gerakkan, kalo ga make durasi transition,
+	nanti pas geraknya ga pelan gituloh langsung gitu
+	kenapa ga di simpen di hover? soalnya kalo di hover bisa sih tp harus disimpen di dua2 nya
+	(di hover yg face1 sma face2) kalo cuman disalah satu, ntar yg gerak lembutnya cuman yg di kasi transition aja gitu*/
+}
+
+.face1{
+	position: relative;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	/*ini tuh fungsinya buat kalo misalkan ada dua item yang bertumpukan,
+	terus pengen salah satunya yg ada di atas/ yang niban, nah si item nya pake z-index*/
+	transform: translateY(100px);
+}
+.container .card:hover .face.face1{
+	transform: translateY(0);	
+	background: #ff0057;
+}
+.face1 .content{
+	opacity: 0.6;
+	/*efek pudar*/
+}
+.container .card:hover .face.face1 .content{
+	opacity: 1;
+}
+
+.face2{
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+	font-size: 14px;
+	transform: translateY(-100px);
+	/*kalo transformX dia ke samping bukan ke atas ato ke bawah*/
+}
+.container .card:hover .face.face2{
+	transform: translateY(0);
+}
+.face2 .content a{
+	margin: 15px 0 0;
+	text-decoration: none;
+	font-weight: 900;
+	color: #333;
+	padding: 5px;
+	border: 1px solid #333;
+}
+.face2 .content a:hover{
+	color: #fff;
+	background: #333;
+}

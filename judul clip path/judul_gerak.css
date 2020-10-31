@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.content{
+    position: relative;
+}
+.content h2{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 8em;
+}
+.content h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 4px #ff0057;
+}
+.content h2:nth-child(2){
+    color: #ff0057;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate{
+    /*CSS Clip Path Maker*/
+    0%,100%{
+        clip-path: polygon(0 46%, 20% 49%, 35% 55%, 46% 66%, 64% 64%, 81% 59%, 100% 57%, 100% 100%, 1% 99%);
+    }
+    50%{
+        clip-path: polygon(0 57%, 11% 60%, 28% 66%, 46% 66%, 60% 56%, 79% 50%, 100% 47%, 100% 100%, 1% 99%);
+    }
+}

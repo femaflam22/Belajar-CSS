@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.container2 img{
+	max-width: 100px;
+}
+.container2{
+	width: 100%;
+	height: 95vh;
+	display: flex;
+}
+.container2 h2{
+	margin: 15px 0;
+	color: #333;
+	text-align: center;
+	font-size: 1.5em
+}
+.tampilan{
+	max-width: 280px;
+	max-height: 380px;
+	background: #b3c6b3;
+	transition: 0.8s;
+}
+.tampilan1{
+	position: relative;
+	max-width: 280px;
+	max-height: 380px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 90px;
+	z-index: 1;
+	transform: translateY(100px);
+}
+.container2 .card:hover .tampilan.tampilan1{
+	transform: translateY(120px);
+	background-color: #e2f7ec;
+}
+.tampilan1 .isi{
+	opacity: 0.8;
+}
+.tampilan2{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 70px 20px;
+	box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	transform: translateY(-280px);
+}
+.container2 .card:hover .tampilan.tampilan2 {
+	background-color: #102a3b;
+	z-index: 1;
+}
+.tampilan2 img{
+	border-radius: 50%;
+	margin-left: 30%;
+	margin-bottom: 15px;
+}
+.tampilan2 h6{
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+.tampilan2 .isi a{
+	position: absolute;
+	bottom: 17px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+	color: #fff;
+	padding: 10px 20px;
+	border : 2px solid #fff;
+}
+.tampilan2 .isi a:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+@media screen and (max-width: 1250px){
+	.container2{
+		flex-wrap: wrap;
+		height: 1030px;
+	}
+	.card{
+		margin-left: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.card{
+		margin-left: 14%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.container2{
+		flex-direction: column;
+		height: 1800px;
+	}
+	.card{
+		margin-left: 35%;
+		margin-bottom: 60px;
+	}
+}
+
+@media screen and (max-width: 690px){
+	.card{
+		margin-left: 30%;
+	}
+}
+
+@media screen and (max-width: 611px){
+	.container2{
+		flex-wrap: wrap;
+		height: 1800px;
+	}
+	.card{
+		margin-left: 25%;
+	}
+}
+
+@media screen and (max-width: 411px){
+	.container2{
+		flex-direction: column;
+		height: 1950px;
+	}
+	.tampilan2 h6{
+		font-size: 20px;
+	}
+	.tampilan2{
+		font-size: 14px;
+	}
+	.tampilan2 .isi a{
+		padding: 5px 30px;
+	}
+	.card{
+		margin: 45px 65px;
+	}
+	.tiga{
+		margin-bottom: 80px;
+	}
+}
